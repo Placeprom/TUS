@@ -1,4 +1,3 @@
-import pandas as pd
 import numpy as np
 
 # Items
@@ -38,8 +37,8 @@ def simple_fight(player1, player2, iterations=10000):
             player1["wins"] += 1
         else:
             player2["wins"] += 1
-    print("Siege Spieler 1: " + str(player1["wins"]))
-    print("Siege Spieler 2: " + str(player2["wins"]))
+    print("Siege Spieler 1: " + str(player1["wins"]) + " " + str(round(player1["wins"]/iterations*100, 2)))
+    print("Siege Spieler 2: " + str(player2["wins"]) + " " + str(round(player2["wins"]/iterations*100, 2)))
 
 
 simple_fight(player1 = _player1, player2 = _player2)
